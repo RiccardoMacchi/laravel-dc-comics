@@ -9,10 +9,11 @@
         </a>
         <nav>
             <ul>
-                @foreach ($headermenu as $link)
+                {{-- @foreach ($headermenu as $link)
                     <li><a class="{{ Route::currentRouteName() == $link['name'] ? 'active' : '' }}"
                             href="{{ route($link['name']) }}">{{ $link['title'] }}</a></li>
-                @endforeach
+                @endforeach --}}
+                <li><a href="{{ route('comics.index') }}">Vai a tutti i Fummeti</a></li>
             </ul>
         </nav>
     </div>
