@@ -14,6 +14,7 @@
                             href="{{ route($link['name']) }}">{{ $link['title'] }}</a></li>
                 @endforeach --}}
                 <li><a href="{{ route('comics.index') }}">Vai a tutti i Fummeti</a></li>
+                <li><a href="{{ route('comics.create') }}">Aggiungi Fumetto</a></li>
             </ul>
         </nav>
     </div>
