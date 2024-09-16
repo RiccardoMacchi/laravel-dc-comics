@@ -1,0 +1,62 @@
+#wrapper_comics {
+    background-color: black;
+    color: white;
+
+    .wrapimg {
+        max-height: 60vh;
+        overflow: hidden;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 80px 0;
+        position: relative;
+
+
+        .btn_more {
+            padding: 10px 60px;
+            margin: 0 auto;
+            background-color: $primary;
+            box-shadow: 4px 3px 5px 0px white;
+        }
+
+        .serie {
+            background-color: $primary;
+            padding: 10px 20px;
+            box-shadow: 4px 3px 5px 0px white;
+            position: absolute;
+            transform: translate(0, -50%);
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.my_card {
+    flex-basis: calc(100% / 6 - 20px);
+
+    div {
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+    }
+
+    h3 {
+        margin: 20px 0;
+    }
+}
+
+// Media query
+
+@media screen and (max-width:900px) {
+    .my_card {
+        flex-basis: calc(100% / 4 - 20px);
+    }
+}
+
+@media screen and (max-width:520px) {
+    .my_card {
+        flex-basis: calc(100% / 2 - 20px);
+    }
+}

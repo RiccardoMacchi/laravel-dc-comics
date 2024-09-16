@@ -1,0 +1,38 @@
+header {
+    background-color: white;
+
+    .container {
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+
+            &:hover,
+            &.active {
+                color: $primary;
+            }
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: right;
+
+            ul li {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:560px) {
+
+    .container {
+        justify-content: center;
+    }
+
+    nav {
+        display: none;
+    }
+}

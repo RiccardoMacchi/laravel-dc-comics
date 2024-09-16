@@ -1,0 +1,39 @@
+@use "./variables" as *;
+
+section {
+    background-color: $primary;
+    color: white;
+
+    h3 {
+        font-weight: 400;
+        margin-left: -10px;
+    }
+
+    .container {
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-width: 100px;
+            transform: scale(0.5);
+        }
+
+        div {
+            flex-basis: calc(100% / 5);
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+// MEDIA QUERY
+
+@media screen and (max-width:520px) {
+    h3 {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+    }
+}
