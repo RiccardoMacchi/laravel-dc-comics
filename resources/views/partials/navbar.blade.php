@@ -4,7 +4,7 @@
 
 <header>
     <div class="container">
-        <a href="{{ route('home') }}">
+        <a href="{{ route('comics.index') }}">
             <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Logo DC">
         </a>
         <nav>

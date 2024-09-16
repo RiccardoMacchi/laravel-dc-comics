@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Controllers\ComicController;
+use App\Http\Controllers\ComicController;
 
 /*
 |--------------------------------------------------------------------------
