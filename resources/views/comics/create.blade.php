@@ -30,7 +30,7 @@
             </div>
             <div class="input_form">
                 <label for="description">DESCRIZIONE</label>
-                <input type="textarea" name="description">
+                <textarea name="description" id="" cols="30" rows="10"></textarea>
             </div>
             <div id="div_btn">
                 <button class="my_btn success" type="submit">Aggiungi</button>
