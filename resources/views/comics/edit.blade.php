@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+    <h1>MODIFICA IL FUMETTO</h1>
     <div class="my_form">
         <form action="{{ route('comics.update', $comic->id) }}" method="POST">
             @csrf

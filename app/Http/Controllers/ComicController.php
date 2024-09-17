@@ -78,6 +78,7 @@ class ComicController extends Controller
         }
         // salviamo i data dentro al comic che mandiamo al DB
         $comic->update($data);
+        // dd($data);
 
         return redirect()->route('comics.show', $comic->id);
     }

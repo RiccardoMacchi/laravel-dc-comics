@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+    <h1>AGGIUNGI QUI IL TUO FUMETTO</h1>
     <div class="my_form">
         <form action="{{ route('comics.store') }}" method="POST">
             @csrf
