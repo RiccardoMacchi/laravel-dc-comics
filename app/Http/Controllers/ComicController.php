@@ -61,7 +61,8 @@ class ComicController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $comic = Comic::find($id);
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -69,7 +70,16 @@ class ComicController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->except('_token', '_method');
+        // dd($data);
+        $comic = Comic::find($id);
+        if($comic->title != $data['title']){
+            $data['slug'] = Helper::generateSlug($data['title'], Comic::class);
+        }
+        // salviamo i data dentro al comic che mandiamo al DB
+        $comic->update($data);
+
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
