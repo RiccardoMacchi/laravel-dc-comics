@@ -1,0 +1,43 @@
+.description {
+    max-width: 60%;
+    margin-left: 40px;
+}
+
+
+.my_form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+
+    input {
+        display: inline-block;
+        width: 100%;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    .input_form {
+        margin: 10px auto;
+    }
+
+    #div_btn {
+        text-align: center;
+    }
+
+    .my_btn {
+        padding: 5px 30px;
+        color: purple;
+
+        &.success {
+            background-color: yellowgreen;
+        }
+
+        &.delete {
+            background-color: red;
+        }
+    }
+}

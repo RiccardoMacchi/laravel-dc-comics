@@ -1,5 +1,5 @@
 @php
-    $headermenu = config('datamenu.headermenu');
+    // $headermenu = config('datamenu.headermenu');
 @endphp
 
 <header>

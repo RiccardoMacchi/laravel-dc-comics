@@ -18,13 +18,14 @@
                     </div>
 
                     <h3>{{ $comic['title'] }}</h3>
+                    <h5>Prezzo: {{ $comic['price'] }}</h5>
                     <a class="my_btn" href="{{ route('comics.show', $comic['id']) }}">DETTAGLI</a>
                 </div>
             @endforeach
 
-            <div class="btn_more">
-                <h2>LOAD MORE</h2>
-            </div>
+        </div>
+        <div class="btn_more">
+            <h2>LOAD MORE</h2>
         </div>
     </div>
 
