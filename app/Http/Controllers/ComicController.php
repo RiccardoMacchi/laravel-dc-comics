@@ -30,17 +30,35 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'title' => 'required|min:5|max:50',
+            'text' => 'required|min:10',
+            'thumb' => 'required|max:255',
+            'price' => 'required|min:0|max:10',
+            'series' => 'required|min:3|max:100',
+            'sale_date' => 'required',
+            'type' => 'required|min:3|max:50',
+        ]);
+
         $data = $request->all();
 
+        $data['slug'] = Helper::generateSlug($data['title'], Comic::class);
         $new_comic = new Comic();
-        $new_comic->title = $data['title'];
-        $new_comic->description = $data['description'];
-        $new_comic->thumb = $data['thumb'];
-        $new_comic->price = $data['price'];
-        $new_comic->sale_date = $data['sale_date'];
-        $new_comic->type = $data['type'];
-        $new_comic->series = $data['series'];
-        $new_comic->slug = Helper::generateSlug($data['title'], Comic::class);
+
+        // utilizziamo il fillable
+        $new_comic->fill($data);
+
+
+        // $new_comic = new Comic();
+        // $new_comic->title = $data['title'];
+        // $new_comic->description = $data['description'];
+        // $new_comic->thumb = $data['thumb'];
+        // $new_comic->price = $data['price'];
+        // $new_comic->sale_date = $data['sale_date'];
+        // $new_comic->type = $data['type'];
+        // $new_comic->series = $data['series'];
+        // $new_comic->slug = Helper::generateSlug($data['title'], Comic::class);
         $new_comic->save();
         // dump($new_comic);
 

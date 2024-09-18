@@ -20,15 +20,16 @@
                     <h3>{{ $comic['title'] }}</h3>
                     <h5>Prezzo: {{ $comic['price'] }}</h5>
                     <div class="wrap_btn">
-                        <a class="my_btn details" href="{{ route('comics.show', $comic['id']) }}"><i
+                        <a class="my_btn details" href="{{ route('comics.show', $comic['id']) }}" title="Dettagli"><i
                                 class="fa-solid fa-eye"></i></a>
                         <form action="{{ route('comics.destroy', $comic['id']) }}" method="POST"
                             onsubmit="return confirm('Sei sicuro di voler eliminare {{ $comic->title }}')">
                             @csrf
                             @method('DELETE')
-                            <button class="my_btn delete" type="submit"><i class="fa-solid fa-trash"></i></button>
+                            <button class="my_btn delete" type="submit" title="Cancella"><i
+                                    class="fa-solid fa-trash"></i></button>
                         </form>
-                        <a class="my_btn modify" href="{{ route('comics.edit', $comic['id']) }}"><i
+                        <a class="my_btn modify" href="{{ route('comics.edit', $comic['id']) }}" title="Modifica"><i
                                 class="fa-solid fa-pencil"></i></a>
                     </div>
                 </div>
